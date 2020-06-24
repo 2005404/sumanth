@@ -28,6 +28,7 @@ struct book1 {
 
    void display1(struct book1 *);
    void avg(struct book1 *);
+void maxpages(struct book1 *);
     int main()
   {
     int i;
@@ -58,6 +59,7 @@ scanf("%d",&book[i].year);
 
 display1(ptrbook);
 avg(ptrbook);
+maxpages(ptrbook);
 }
 void display0(struct book2 book3)
  {
@@ -85,4 +87,15 @@ void avg(struct book1 *ptrbook)
          average=sum/N;
          printf("The average price of all books is: %d\n\n", average);
      }
-
+void maxpages(struct book1 *ptrbook)
+     {
+     int max=0;
+     char n[20];
+     for(i=0;i<N;i++)
+     {
+         if((ptrbook+i)->pages>=max){
+        max=(ptrbook+i)->pages;
+        strcpy(n,(ptrbook+i)->name);
+         }}printf("\n\n The book with maximum page is :%d\n",max);
+         printf("The book name is : ");
+         puts(n);}
