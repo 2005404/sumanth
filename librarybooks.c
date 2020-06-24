@@ -2,6 +2,7 @@
 #define N 3
 #define MAX_NAME_LEN 50
 int i;
+/
 
 struct book2 {
   char name[MAX_NAME_LEN];
