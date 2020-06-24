@@ -27,7 +27,6 @@ struct book1 {
  void display0(struct book2 book3);
 
    void display1(struct book1 *);
-   void uniqueid(struct book1 *);
    void avg(struct book1 *);
     int main()
   {
@@ -58,7 +57,6 @@ scanf("%d",&book[i].year);
 }
 
 display1(ptrbook);
-uniqueid(ptrbook);
 avg(ptrbook);
 }
 void display0(struct book2 book3)
@@ -76,20 +74,7 @@ printf("-------------------------------------------------------------\n");
     }
     printf("-------------------------------------------------------------\n");
 }
- void uniqueid(struct book1 *ptrbook)
-  {
-      int id;
-      char p[20];
-      printf("\n enter the unique id:(1-book1,2-book2,3-book3.......) ");
-  scanf("%d",&id);
-      for(i=0;i<N;i++)
-      {
-          if(i+1==id){
-            strcpy(p,(ptrbook+i)->name);
-            printf("The book name is : ");
-          puts(p);}
-      }
-  }
+
 void avg(struct book1 *ptrbook)
 {
     int sum=0,i,average;
