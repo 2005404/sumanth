@@ -28,6 +28,7 @@ struct book1 {
 
    void display1(struct book1 *);
    void uniqueid(struct book1 *);
+   void avg(struct book1 *);
     int main()
   {
     int i;
@@ -58,6 +59,7 @@ scanf("%d",&book[i].year);
 
 display1(ptrbook);
 uniqueid(ptrbook);
+avg(ptrbook);
 }
 void display0(struct book2 book3)
  {
@@ -88,4 +90,14 @@ printf("-------------------------------------------------------------\n");
           puts(p);}
       }
   }
+void avg(struct book1 *ptrbook)
+{
+    int sum=0,i,average;
+     for(i=0;i<N;i++)
+     {
+         sum=sum+(ptrbook+i)->price;
+     }
+         average=sum/N;
+         printf("The average price of all books is: %d\n\n", average);
+     }
 
